@@ -1,0 +1,3 @@
+model_checkpoint_path: "C:\\Users\\Zack\\Documents\\GitHub\\neuro-circuit\\DeepLabCut\\Reaching-Mackenzie-2018-08-30\\dlc-models\\iteration-0\\ReachingAug30-trainset95shuffle1\\train\\snapshot-600"
+all_model_checkpoint_paths: "C:\\Users\\Zack\\Documents\\GitHub\\neuro-circuit\\DeepLabCut\\Reaching-Mackenzie-2018-08-30\\dlc-models\\iteration-0\\ReachingAug30-trainset95shuffle1\\train\\snapshot-300"
+all_model_checkpoint_paths: "C:\\Users\\Zack\\Documents\\GitHub\\neuro-circuit\\DeepLabCut\\Reaching-Mackenzie-2018-08-30\\dlc-models\\iteration-0\\ReachingAug30-trainset95shuffle1\\train\\snapshot-600"

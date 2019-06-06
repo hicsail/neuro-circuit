@@ -1,0 +1,12 @@
+*.avi
+*.csv
+*.xlsx
+*.xls
+*.pkl
+
+# Other
+venv
+*.idea
+__pycache__
+*.Rproj.user
+.Rproj.user
