@@ -1,0 +1,209 @@
+Last login: Wed Jun  5 10:24:07 on ttys000
+Zack:~ Zack$ ls
+  					PostgreSQL
+Applications				Public
+Applications (Parallels)		WebstormProjects
+Creative Cloud Files			anaconda
+Creative Cloud Files (archived) (1)	app.log
+Creative Cloud Files (unknown)		bookworm
+Desktop					hs_err_pid12122.log
+Documents				hs_err_pid12130.log
+Downloads				hs_err_pid12138.log
+Dropbox					hs_err_pid12157.log
+GitHub					hs_err_pid12217.log
+Gitee					hs_err_pid412.log
+Google Drive				iCloud Drive (Archive)
+Library					ocr-error-1.png
+Movies					octave-workspace
+Music					whiskers-sail-2019-06-05
+Pictures				zackl@bu.edu Creative Cloud Files
+Zack:~ Zack$ cd github
+Zack:github Zack$ ls
+AppFromScratch_PomodoroPower	StudyDate
+BUMIC_rasa_template		StudyDate_web
+BURegisterBot			chat_app_flask
+CMBC_bot			gen-cover-letter
+DeepLabCut			handson-ml-self
+Industry_relationship_graph	neuro-circuit
+NCAA-NBA-Picker			study-date
+OpenWebFall2018			tensorflow_cookbook
+RapTimer			website
+Registerbot			zacklight.com
+Zack:github Zack$ cd neuro-circuit/
+Zack:neuro-circuit Zack$ ls
+DeepLabCut	whiskers
+Zack:neuro-circuit Zack$ cd whiskers/
+Zack:whiskers Zack$ ls
+raw_videos	run.py
+Zack:whiskers Zack$ source activate dlc-macOS-CPU
+(dlc-macOS-CPU) Zack:whiskers Zack$ ls
+raw_videos	run.py
+(dlc-macOS-CPU) Zack:whiskers Zack$ cat run.py
+import deeplabcut
+import matplotlib
+
+task='whiskers' # Enter the name of your experiment Task
+experimenter='sail' # Enter the name of the experimenter
+video=['/Users/Zack/github/neuro-circuit/whiskers/raw_videos/bb001_0_20180802092437.avi'] # Enter the paths of your videos you want to grab frames from.
+
+path_config_file=deeplabcut.create_new_project(task,experimenter,video, working_directory='./',copy_videos=True) #change the working directory to where you want the folders created.
+
+deeplabcut.extract_frames(path_config_file,'manual', crop=False) #'uniform',
+(dlc-macOS-CPU) Zack:whiskers Zack$ import deeplabcut as dlc
+-bash: import: command not found
+(dlc-macOS-CPU) Zack:whiskers Zack$ pythonw
+Python 3.6.6 |Anaconda, Inc.| (default, Jun 28 2018, 11:07:29) 
+[GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import deeplabcut as dlc
+>>> path_config_file = "/Users/Zack/whiskers-sail-2019-06-05"
+>>> dlc.label_frames(path_config_file)
+objc[6192]: Class FIFinderSyncExtensionHost is implemented in both /System/Library/PrivateFrameworks/FinderKit.framework/Versions/A/FinderKit (0x7fff9bbbccd0) and /System/Library/PrivateFrameworks/FileProvider.framework/OverrideBundles/FinderSyncCollaborationFileProviderOverride.bundle/Contents/MacOS/FinderSyncCollaborationFileProviderOverride (0x14d19ecd8). One of the two will be used. Which one is undefined.
+Traceback (most recent call last):
+  File "/Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/utils/auxiliaryfunctions.py", line 75, in read_config
+    with open(path, 'r') as f:
+IsADirectoryError: [Errno 21] Is a directory: '/Users/Zack/whiskers-sail-2019-06-05'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/generate_training_dataset/labeling_toolbox.py", line 400, in browseDir
+    self.cfg = auxiliaryfunctions.read_config(self.config_file)
+  File "/Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/utils/auxiliaryfunctions.py", line 78, in read_config
+    if err.args[2] == "could not determine a constructor for the tag '!!python/tuple'":
+IndexError: tuple index out of range
+>>> dlc.check_labels(path_config_file)
+Traceback (most recent call last):
+  File "/Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/utils/auxiliaryfunctions.py", line 75, in read_config
+    with open(path, 'r') as f:
+IsADirectoryError: [Errno 21] Is a directory: '/Users/Zack/whiskers-sail-2019-06-05'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/generate_training_dataset/trainingsetmanipulation.py", line 244, in check_labels
+    cfg = auxiliaryfunctions.read_config(config)
+  File "/Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/utils/auxiliaryfunctions.py", line 78, in read_config
+    if err.args[2] == "could not determine a constructor for the tag '!!python/tuple'":
+IndexError: tuple index out of range
+>>> dlc.check_labels(path_config_file)
+Traceback (most recent call last):
+  File "/Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/utils/auxiliaryfunctions.py", line 75, in read_config
+    with open(path, 'r') as f:
+IsADirectoryError: [Errno 21] Is a directory: '/Users/Zack/whiskers-sail-2019-06-05'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/generate_training_dataset/trainingsetmanipulation.py", line 244, in check_labels
+    cfg = auxiliaryfunctions.read_config(config)
+  File "/Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/utils/auxiliaryfunctions.py", line 78, in read_config
+    if err.args[2] == "could not determine a constructor for the tag '!!python/tuple'":
+IndexError: tuple index out of range
+>>> path_config_file = "/Users/Zack/whiskers-sail-2019-06-05/config.yaml"
+>>> path_config_file = "/Users/Zack/whiskers-sail-2019-06-05/config.yaml"
+>>> dlc.check_labels(path_config_file)
+Creating images with labels by sail.
+/Users/Zack/whiskers-sail-2019-06-05/labeled-data/bb001_0_20180802092437_labeled  already exists!
+They are stored in the following folder: /Users/Zack/whiskers-sail-2019-06-05/labeled-data/bb001_0_20180802092437_labeled.
+If all the labels are ok, then use the function 'create_training_dataset' to create the training dataset!
+>>> dlc.create_training_dataset(path_config_file)
+/Users/Zack/whiskers-sail-2019-06-05/training-datasets/iteration-0/UnaugmentedDataSet_whiskersJun5  already exists!
+/Users/Zack/whiskers-sail-2019-06-05/dlc-models/iteration-0/whiskersJun5-trainset95shuffle1  already exists!
+/Users/Zack/whiskers-sail-2019-06-05/dlc-models/iteration-0/whiskersJun5-trainset95shuffle1//train  already exists!
+/Users/Zack/whiskers-sail-2019-06-05/dlc-models/iteration-0/whiskersJun5-trainset95shuffle1//test  already exists!
+The training dataset is successfully created. Use the function 'train_network' to start training. Happy training!
+>>> dlc.train_network(path_config_file)
+Config:
+{'all_joints': [[0], [1], [2]],
+ 'all_joints_names': ['whisker_1_left', 'whisker_2_left', 'whisker_3_left'],
+ 'batch_size': 1,
+ 'bottomheight': 400,
+ 'crop': True,
+ 'crop_pad': 0,
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_whiskersJun5/whiskers_sail95shuffle1.mat',
+ 'dataset_type': 'default',
+ 'display_iters': 1000,
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'init_weights': '/Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/resnet_v1_50.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'leftwidth': 400,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'max_input_size': 1500,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_whiskersJun5/Documentation_data-whiskers_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'minsize': 100,
+ 'mirror': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'resnet_50',
+ 'num_joints': 3,
+ 'optimizer': 'sgd',
+ 'pos_dist_thresh': 17,
+ 'project_path': '/Users/Zack/whiskers-sail-2019-06-05',
+ 'regularize': False,
+ 'rightwidth': 400,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'shuffle': True,
+ 'snapshot_prefix': '/Users/Zack/whiskers-sail-2019-06-05/dlc-models/iteration-0/whiskersJun5-trainset95shuffle1/train/snapshot',
+ 'stride': 8.0,
+ 'topheight': 400,
+ 'use_gt_segm': False,
+ 'video': False,
+ 'video_batch': False,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+INFO:tensorflow:Restoring parameters from /Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/resnet_v1_50.ckpt
+Training parameter:
+{'stride': 8.0, 'weigh_part_predictions': False, 'weigh_negatives': False, 'fg_fraction': 0.25, 'weigh_only_present_joints': False, 'mean_pixel': [123.68, 116.779, 103.939], 'shuffle': True, 'snapshot_prefix': '/Users/Zack/whiskers-sail-2019-06-05/dlc-models/iteration-0/whiskersJun5-trainset95shuffle1/train/snapshot', 'log_dir': 'log', 'global_scale': 0.8, 'location_refinement': True, 'locref_stdev': 7.2801, 'locref_loss_weight': 0.05, 'locref_huber_loss': True, 'optimizer': 'sgd', 'intermediate_supervision': False, 'intermediate_supervision_layer': 12, 'regularize': False, 'weight_decay': 0.0001, 'mirror': False, 'crop_pad': 0, 'scoremap_dir': 'test', 'dataset_type': 'default', 'use_gt_segm': False, 'batch_size': 1, 'video': False, 'video_batch': False, 'crop': True, 'cropratio': 0.4, 'minsize': 100, 'leftwidth': 400, 'rightwidth': 400, 'topheight': 400, 'bottomheight': 400, 'all_joints': [[0], [1], [2]], 'all_joints_names': ['whisker_1_left', 'whisker_2_left', 'whisker_3_left'], 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_whiskersJun5/whiskers_sail95shuffle1.mat', 'display_iters': 1000, 'init_weights': '/Users/Zack/anaconda/envs/dlc-macOS-CPU/lib/python3.6/site-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/resnet_v1_50.ckpt', 'max_input_size': 1500, 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_whiskersJun5/Documentation_data-whiskers_95shuffle1.pickle', 'min_input_size': 64, 'multi_step': [[0.005, 10000], [0.02, 430000], [0.002, 730000], [0.001, 1030000]], 'net_type': 'resnet_50', 'num_joints': 3, 'pos_dist_thresh': 17, 'project_path': '/Users/Zack/whiskers-sail-2019-06-05', 'save_iters': 50000, 'scale_jitter_lo': 0.5, 'scale_jitter_up': 1.25}
+Starting training....
+^C
+(dlc-macOS-CPU) Zack:whiskers Zack$ dlc.evaluate_network(path_config_file)
+-bash: syntax error near unexpected token `path_config_file'
+(dlc-macOS-CPU) Zack:whiskers Zack$ pythonw
+Python 3.6.6 |Anaconda, Inc.| (default, Jun 28 2018, 11:07:29) 
+[GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import deeplabcut as dlc
+>>> path_config_file = "/Users/Zack/whiskers-sail-2019-06-05/config.yaml"
+>>> new_vid = "/Users/Zack/GitHub/neuro-circuit/whiskers/raw_videos/bb001_0_20180802092437002.avi"
+>>> dlc.add_new_videos(path_config_file, [new_vid])
+Creating the symbolic link of the video
+New video was added to the project! Use the function 'extract_frames' to select frames for labeling.
+>>> dlc.extract_frames(path_config_file)
+Config file read successfully.
+Do you want to extract (perhaps additional) frames for video: /Users/Zack/github/neuro-circuit/whiskers/raw_videos/bb001_0_20180802092437.avi ?
+yes/noyes
+Extracting frames based on kmeans ...
+Kmeans-quantization based extracting of frames from 0.0  seconds to 12.62  seconds.
+Extracting and downsampling... 6311  frames from the video.
+6311it [00:09, 673.22it/s]
+Kmeans clustering ... (this might take a while)
+Do you want to extract (perhaps additional) frames for video: /Users/Zack/GitHub/neuro-circuit/whiskers/raw_videos/bb001_0_20180802092437002.avi ?
+yes/noyes
+Extracting frames based on kmeans ...
+Kmeans-quantization based extracting of frames from 0.0  seconds to 12.62  seconds.
+Extracting and downsampling... 6311  frames from the video.
+6311it [00:08, 716.87it/s]
+Kmeans clustering ... (this might take a while)
+
+Frames were selected.
+You can now label the frames using the function 'label_frames' (if you extracted enough frames for all videos).
+>>> 

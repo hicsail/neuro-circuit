@@ -4,11 +4,11 @@ scorer: sail
 date: Jun6
 
 # Project path (change when moving around)
-project_path: C:\Users\Zack\Documents\GitHub\neuro-circuit\whiskers\whiskers-sail-2019-06-06
+project_path: /Users/Zack/GitHub/neuro-circuit/whiskers/whiskers-sail-2019-06-06
 
 # Annotation data set configuration (and individual video cropping parameters)
 video_sets:
-  C:\Users\Zack\Documents\GitHub\neuro-circuit\whiskers\raw_videos\bb001_0_20180802092437.avi:
+  /Users/Zack/GitHub/neuro-circuit/whiskers/raw_videos/bb001_0_20180802092437.avi:
     crop: 0, 560, 0, 608
 bodyparts:
 - Hand
