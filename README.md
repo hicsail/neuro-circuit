@@ -94,7 +94,7 @@ In the folder bash_scripts, run the file whose name ends with "sh" and having th
 ## *To Add New Videos (In any State)* 
 
 1. Put new videos in the "raw_videos" folder
-2. Perform extraction, labeling as needed
+2. Perform extraction, labeling as needed (not done automatically)
 
 ## Ask Questions
 

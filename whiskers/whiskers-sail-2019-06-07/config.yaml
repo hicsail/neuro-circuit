@@ -4,15 +4,17 @@ scorer: sail
 date: Jun7
 
 # Project path (change when moving around)
-<<<<<<< HEAD:whiskers/whiskers-sail-2019-06-07/config.yaml
 project_path: C:\Users\Zack\Documents\GitHub\neuro-circuit\whiskers\whiskers-sail-2019-06-07
-=======
-project_path: /Users/Zack/GitHub/neuro-circuit/whiskers/whiskers-sail-2019-06-06
->>>>>>> e182410cdb2e0eda60a2b578f3f1101db76860ae:whiskers/whiskers-sail-2019-06-06/config.yaml
 
 # Annotation data set configuration (and individual video cropping parameters)
 video_sets:
-  /Users/Zack/GitHub/neuro-circuit/whiskers/raw_videos/bb001_0_20180802092437.avi:
+  C:\Users\Zack\Documents\GitHub\neuro-circuit\whiskers\raw_videos\bb001_0_20180802092437.avi:
+    crop: 0, 560, 0, 608
+  C:\Users\Zack\Documents\GitHub\neuro-circuit\whiskers\raw_videos\new_vid.avi:
+    crop: 0, 560, 0, 608
+  C:\Users\Zack\Documents\GitHub\neuro-circuit\whiskers\raw_videos\3.avi:
+    crop: 0, 560, 0, 608
+  C:\Users\Zack\Documents\GitHub\neuro-circuit\whiskers\raw_videos\4.avi:
     crop: 0, 560, 0, 608
 bodyparts:
 - Hand
