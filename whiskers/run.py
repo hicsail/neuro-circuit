@@ -13,11 +13,15 @@ path_config_file=dlc.create_new_project(task,experimenter,video_full_path, worki
 print(path_config_file)
 
 dlc.extract_frames(path_config_file,'automatic', "uniform", crop=False) #'uniform',
-dlc.label_frames(path_config_file)
-dlc.check_labels(path_config_file)
 
-# add new videos
-dlc.add_new_videos()
 
-dlc.create_training_dataset(path_config_file)
-dlc.train_network(path_config_file)
+# dlc.label_frames(path_config_file)
+# dlc.check_labels(path_config_file)
+#
+# # add new videos
+# dlc.add_new_videos()
+#
+# dlc.create_training_dataset(path_config_file)
+# dlc.train_network(path_config_file)
+
+input('Done. Simply close or press any key to exit')

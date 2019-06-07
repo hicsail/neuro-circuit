@@ -1,10 +1,8 @@
 #!/bin/bash
 echo "creating environment"
-conda env create -f dlc-windowsGPU.yaml -n test-dlc-windowsGPU
+conda env create -f dlc-windowsGPU.yaml -n dlc-windowsGPU
 # link to Jupyter Notebook just in case we run Jupyter Notebook
-conda install nb_conda
+conda install nb_conda -y
 echo "activating environment"
-activate test-dlc-windowsGPU
-pip install deeplabcut
-pip install tensorflow
-conda install python.app
+activate dlc-windowsGPU
+read -p "all set: press enter to continue"
