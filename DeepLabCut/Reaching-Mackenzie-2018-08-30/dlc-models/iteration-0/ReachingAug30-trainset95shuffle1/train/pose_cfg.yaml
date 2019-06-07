@@ -14,7 +14,7 @@ cropratio: 0.4
 dataset: training-datasets\iteration-0\UnaugmentedDataSet_ReachingAug30\Reaching_Mackenzie95shuffle1.mat
 display_iters: 1000
 global_scale: 0.8
-init_weights: C:\Users\Zack\Anaconda3\envs\dlc-windowsGPU\lib\site-packages\deeplabcut\pose_estimation_tensorflow\models\pretrained\resnet_v1_50.ckpt
+init_weights: C:\Users\Zack\Anaconda3\envs\test-dlc-windowsGPU\lib\site-packages\deeplabcut\pose_estimation_tensorflow\models\pretrained\resnet_v1_50.ckpt
 intermediate_supervision: false
 intermediate_supervision_layer: 12
 leftwidth: 400

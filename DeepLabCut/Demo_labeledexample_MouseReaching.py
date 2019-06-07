@@ -55,6 +55,8 @@ import deeplabcut
 
 # OPTIONAL: just an example of how for you to see that TF is here!
 import tensorflow as tf
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 tf.__version__
 
 
@@ -135,7 +137,7 @@ deeplabcut.evaluate_network(path_config_file,plotting=True)
 #The video can be the one you trained with and new videos that look similar, i.e. same experiments, etc.
 # You can add individual videos, OR just a folder - it will skip videos that are already analyzed once.
 
-videofile_path = ['/home/mackenzie/DEEPLABCUT/DeepLabCut2.0/examples/Reaching-Mackenzie-2018-08-30/videos/MovieS2_Perturbation_noLaser_compressed.avi']                           
+videofile_path = [r'C:\Users\Zack\Documents\GitHub\DeepLabCut\examples\Reaching-Mackenzie-2018-08-30\videos\MovieS2_Perturbation_noLaser_compressed.avi']
 
 
 # In[ ]:
