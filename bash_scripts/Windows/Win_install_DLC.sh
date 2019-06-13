@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "creating environment"
-conda env create -f dlc-windowsGPU.yaml -n dlc-windowsGPU
+conda create -f dlc-windowsGPU.yaml -n dlc-windowsGPU
 echo "activating environment"
 activate dlc-windowsGPU
 # link to Jupyter Notebook just in case we run Jupyter Notebook

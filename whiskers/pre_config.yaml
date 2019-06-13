@@ -1,0 +1,23 @@
+# Try not to use space in values
+# Required
+# If the videos are in a sub-folder of the current folder, just type ./ and the name of the folder
+# feel free to change the following example (./raw_videos)
+relative_Path_to_videos: ./raw_videos
+
+
+# Optional
+task:
+researchers:
+# Change the working directory to where you want the folders created. If left blank, the current directory is used
+working_directory:
+frame_extraction_mode:
+frame_extraction_algorithm:
+
+
+# Default Options
+default_values:
+  task: whiskers
+  researchers: the_Chen_Lab
+  working_directory: current directory
+  frame_extraction_mode: automatic
+  frame_extraction_algorithm: uniform

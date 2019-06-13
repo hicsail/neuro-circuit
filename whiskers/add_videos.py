@@ -8,6 +8,6 @@ with open('config.json', 'r') as fp:
 path_config_file = config["path_config_file"]
 
 # get full path here
-video_full_paths = helpers.get_video_full_path()
+video_full_paths = helpers.get_video_full_paths()
 
 dlc.add_new_videos(path_config_file, video_full_paths)

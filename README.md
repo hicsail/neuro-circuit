@@ -2,10 +2,10 @@
 
 ## Must-Know-Knowledge
 
-* It is highly recommended for you to read the user_guide here: <https://github.com/hicsail/neuro-circuit//blob/master/DLC_user_guide.pdf>
+* It is highly recommended for you to read the user guide here: <https://github.com/hicsail/neuro-circuit//blob/master/DLC_user_guide.pdf>
 * We assume you have installed conda. Instructions here: <https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>
 
-How to write files with the "sh" extension?
+How to run files with the "sh" extension?
 
 1. Step one:
 
