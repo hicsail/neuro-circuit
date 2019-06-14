@@ -11,4 +11,3 @@ elif platform == "win32":
     print("You are using a Windows")
     process = subprocess.check_output("conda env create -f dlc-windowsGPU.yaml -n 6_11_5_29-dlc-windowsGPU")
     process = subprocess.check_output('conda activate 6_11_5_29-dlc-windowsGPU')
-

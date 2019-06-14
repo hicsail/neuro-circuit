@@ -18,3 +18,4 @@ dependencies:
   - pytables==3.4.4
   - pip:
     - deeplabcut
+    - ruamel.yaml

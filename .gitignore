@@ -1,15 +1,15 @@
 DeepLabCut_original_repo/
 
-# By extension
+# files by extension
 *.avi
 *.csv
 *.xlsx
 *.xls
 *.pkl
 
-# Other
+# other
 venv
 *.idea
 __pycache__
 *.Rproj.user
-.Rproj.user
+.DS_Store
