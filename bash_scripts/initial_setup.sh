@@ -3,7 +3,8 @@ echo "Checking Conda updates"
 conda update -y -n base -c defaults conda
 
 # System
-install_yaml = $(check_os.sh)
+chmod +x ./check_os.sh
+install_yaml=$(./check_os.sh)
 ## Environment
 echo "Creating environment from $install_yaml.yaml"
 conda env create -f $install_yaml.yaml
