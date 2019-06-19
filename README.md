@@ -62,6 +62,8 @@
 
 3. Run "initial_setup.sh" in the folder "bash_scripts"
 
+   **Do not exit even if the terminal shows "Done" as there are more steps.** It typically takes 10-15 minutes the first time.
+
 4. If you have selected for manual frame-extraction, the extracting GUI would launch.
 
 5. The labeling GUI would launch.
