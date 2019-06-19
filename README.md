@@ -54,7 +54,7 @@
 
 0. We assume you have installed Conda. If not, instructions are here: <https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>
 
-1. Open the "pre_config.yaml" file in the folder "whiskers" with the notebook app, and change the parameters to suit your project
+1. Open the "pre_config.yaml" file in the folder "whiskers" with the notebook app, and change the parameters to suit your project (see the guide mentioned in "necessary-prior-knowledge" for parameters)
 
 2. (If using Windows, **run the following file as administrator**
 
@@ -62,7 +62,7 @@
 
 3. Run "initial_setup.sh" in the folder "bash_scripts"
 
-4. If you have selected for manual frame-extraction, the GUI would launch.
+4. If you have selected for manual frame-extraction, the extracting GUI would launch.
 
 5. The labeling GUI would launch.
 
@@ -74,7 +74,7 @@
 
    * Click "Save" often and before quitting to save the work.
 
-   * Feel free to quit if you decide to take a break. Just launch it again and your work would be there.
+   * Feel free to quit if you decide to take a break. Continue your labeling by the step in "2. Continue to Label."
 
 ## 2. Continue to Label
 
