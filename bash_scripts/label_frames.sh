@@ -8,4 +8,5 @@ if [ "$install_yaml" == "dlc-macOS-CPU" ]
 then
 	python label.py
 fi
+cd ../bash_scripts/
 read -p "all set: press enter to continue"

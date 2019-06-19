@@ -1,7 +1,7 @@
 import deeplabcut as dlc
 import helpers
 
-def extract(path_config_file, mode='automatic', algo="uniform"):
+def extract(path_config_file, mode='automatic', algo="kmeans"):
     # Set userfeedback to True if hoping to decide whether to extract frames on a video by video basis
     dlc.extract_frames(path_config_file, mode=mode, algo=algo, userfeedback=False, crop=False)
 

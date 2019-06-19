@@ -21,6 +21,11 @@ def setup():
     # Create projectp
     path_config_file = dlc.create_new_project(task, researchers, video_full_paths, working_directory=os.getcwd(), copy_videos=False)
 
+    # Store the project path for future processes
+    path_config = {"path_config_file" : path_config_file}
+    with open('./config.json', 'w+') as fp:
+        json.dump(path_config, fp, indent=4)
+
     # Change the auto generated config file
     bodyparts = handle_none.read("bodyparts")
     numframes2pick = handle_none.read("numframes2pick")
@@ -36,16 +41,9 @@ def setup():
     with open(path_config_file, 'w') as fp:
         config_yaml.dump(config, fp)
 
-    # Store the project path for future processes
-    path_config = {"path_config_file" : path_config_file}
-
     frame_extraction_mode = handle_none.read("frame_extraction_mode")
     frame_extraction_algorithm = handle_none.read("frame_extraction_algorithm")
-
     extract.extract(path_config_file, mode=frame_extraction_mode, algo=frame_extraction_algorithm)
-
-    with open('config.json', 'w') as fp:
-        json.dump(path_config, fp, indent=4)
 
 if __name__ == "__main__":
     setup()

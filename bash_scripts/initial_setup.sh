@@ -19,5 +19,6 @@ conda install nb_conda -y
 cd ../whiskers/
 python create_project_and_extract_frames.py
 python label.py
+cd ../bash_scripts/
 # Finished
 read -p "all set: press enter to continue"

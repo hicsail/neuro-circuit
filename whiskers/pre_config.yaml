@@ -4,8 +4,8 @@
 # Feel free to change the following example (./raw_videos)
 relative_Path_to_videos: ./raw_videos
 bodyparts:
-- whisker_1
-- whisker_2
+  - whisker_1
+  - whisker_2
 
 # Optional
 task:
@@ -23,5 +23,5 @@ default_values:
   researchers: the_Chen_Lab
   working_directory: current directory
   frame_extraction_mode: automatic
-  frame_extraction_algorithm: uniform
+  frame_extraction_algorithm: kmeans
   numframes2pick: 20
