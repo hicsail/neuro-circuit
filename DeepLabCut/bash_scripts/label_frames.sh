@@ -2,7 +2,7 @@
 # System
 install_yaml=$(./check_os.sh)
 source activate $install_yaml
-cd ../whiskers/
+cd ../code/
 if [ "$install_yaml" == "dlc-macOS-CPU" ]
 	pythonw label.py
 then

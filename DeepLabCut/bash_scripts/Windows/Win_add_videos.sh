@@ -1,6 +1,6 @@
 #!/bin/bash
-cd ../../whiskers/
+cd ../../code/
 echo "activating environment"
 conda activate dlc-windowsGPU
-python extract.py
+python add_videos.py
 read -p "all set: press enter to continue"

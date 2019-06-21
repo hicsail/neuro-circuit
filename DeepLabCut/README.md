@@ -1,0 +1,97 @@
+# Using DeepLabCut
+
+## Necessary-Prior-Knowledge
+
+1. It is highly recommended for you to read the [user guide](<https://github.com/hicsail/neuro-circuit//blob/master/DLC_user_guide.pdf>)
+2. A basic understanding of YAML files is helpful ([this is more than enough](<https://rollout.io/blog/yaml-tutorial-everything-you-need-get-started/>))
+
+
+## Workflow
+
+### 1. Installation
+
+1. Make sure to have Conda. You can install it [here](<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>)
+2. If using Windows, make sure to have *Git Bash*. You can install it [here](https://gitforwindows.org/)
+
+### 2. Environment & Project Creation
+
+Tips
+
+* If you have not put too much work in, it is often best to delete the project folder and start the script over when you have accidentally made a mistake
+
+* If something goes wrong with the software, feel free to check the errors displayed in that window
+* If there is no error among the previous output, just press any key in its window to exit the script. Otherwise, feel free to consult [the original repository's troubleshooting tips](<https://github.com/AlexEMG/DeepLabCut/wiki/Troubleshooting-Tips>) or contact us (see button).
+
+Instructions
+
+1. Open the "pre_config.yaml" file with a text editor, and change the parameters to suit your project (see explanations of most of the parameters in the guide mentioned in "necessary-prior-knowledge")
+
+2. Run "initial_setup.sh" in the folder "bash_scripts" (instructions below)
+
+   **Do not exit even if the terminal shows "Done" as there are more steps.** It typically takes 10-15 minutes the first time.
+
+   You are recommended to run files with the "sh" extension in the following manner
+
+   * Step one
+  * Windows: 
+   
+    Run Git Bash (**must run as administration**)
+   
+    [Optional: always make an app run in admin](https://www.groovypost.com/howto/make-windows-10-apps-always-run-with-administrator-privileges/)
+   
+  * Mac:
+   
+    Run Terminal ([Hints here](https://macpaw.com/how-to/use-terminal-on-mac))
+
+
+   * Step two
+
+     Enter "cd <path>" where <path> is your system path to the shell script
+
+     Example: "cd C:\Users\Zack\Documents\GitHub\neuro-circuit\DeepLabCut\bash_scripts" if I have a script in the folder bash_scripts
+
+   * Step three
+
+     - Windows: 
+
+       In command prompt, enter "<name_of_script>" and press enter
+
+       Example: "script.sh"
+
+     - Mac:
+
+       In terminal, enter "sh <name_of_script>" and press enter
+
+       Example: "sh script.sh"
+
+   * Step four
+
+     When the script is finished, it generally should output "all set: press enter to continue."
+
+3. If you have selected manual frame-extraction, the extracting GUI would launch
+
+   *Note you may get an error by selecting Load Videos but closing the file explorer without choosing anything*
+
+4. The labeling GUI would launch
+
+   * Click "Load frames"
+
+   * Each video would have its own folder (named same as the video) in ".../<working_directory> aka the project folder\labeled-data\" (which needs to be a full path)
+
+   * Select the folder for the video you want to label
+
+     *Note the folder name is misleading since it contains both labeled and unlabeled images*
+
+   Feel free to quit if you decide to take a break. Continue labeling by the step below: "Continue to Label"
+
+### 3. Continuous Labeling
+
+Run "label_frames.sh" in the folder "bash_scripts"
+
+## Questions?
+
+Contact BU SAIL
+
+shreyap@bu.edu
+
+zackL@bu.edu
