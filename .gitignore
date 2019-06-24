@@ -1,4 +1,5 @@
 DeepLabCut_original_repo/
+config.json
 
 # files by extension
 *.avi
