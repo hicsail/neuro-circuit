@@ -11,15 +11,33 @@
 ### 1. Installation
 
 1. Make sure to have Conda. You can install it [here](<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>)
-2. If using Windows, make sure to have *Git Bash*. You can install it [here](https://gitforwindows.org/)
+
+2. If using Windows
+
+   * make sure to have *Git Bash*. You can install it [here](https://gitforwindows.org/)
+
+   * have an NVIDIA driver installed, and CUDA (currently, TensorFlow 1.13 is installed inside the env, so you can install CUDA 10 and an appropriate driver)
+
+     DRIVERS: https://www.nvidia.com/Download/index.aspx
+
+     CUDA: https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html#verify-you-have-cuda-enabled-system
+     
+     [Versions to Use/Troubleshooting](https://github.com/AlexEMG/DeepLabCut/blob/master/docs/installation.md#troubleshooting)
 
 ### 2. Environment & Project Creation
 
 Tips
 
-* If you have not put too much work in, it is often best to delete the project folder and start the script over when you have accidentally made a mistake
+* When you have accidentally made a mistake, if you have not put too much work in, it is often best to 
+
+  * delete the project folder 
+
+  * or even the conda environment (as well as the environment folder usually located at C:\Users\<Username>\\.conda\envs) 
+
+  and start the script over
 
 * If something goes wrong with the software, feel free to check the errors displayed in that window
+
 * If there is no error among the previous output, just press any key in its window to exit the script. Otherwise, feel free to consult [the original repository's troubleshooting tips](<https://github.com/AlexEMG/DeepLabCut/wiki/Troubleshooting-Tips>) or contact us (see button).
 
 Instructions

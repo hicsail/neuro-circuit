@@ -1,5 +1,6 @@
 DeepLabCut_original_repo/
 config.json
+bank.py
 
 # files by extension
 *.avi
