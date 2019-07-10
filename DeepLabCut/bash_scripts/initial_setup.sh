@@ -16,7 +16,7 @@ source activate $install_yaml
 conda install nb_conda -y
 
 # Project
-cd ../whiskers/
+cd ../code/
 python create_project_and_extract_frames.py
 python label.py
 cd ../bash_scripts/

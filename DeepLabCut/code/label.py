@@ -3,6 +3,7 @@ import helpers
 
 def label(path_config_file):
     dlc.label_frames(path_config_file)
+    print("Checking labels")
     dlc.check_labels(path_config_file)
 
 if __name__ == "__main__":
