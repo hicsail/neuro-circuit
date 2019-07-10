@@ -1,68 +1,65 @@
 # Using DeepLabCut
 
-## Necessary-Prior-Knowledge
+### Necessary-Prior-Knowledge
 
 1. It is highly recommended for you to read the [user guide](<https://github.com/hicsail/neuro-circuit//blob/master/DLC_user_guide.pdf>)
 2. A basic understanding of YAML files is helpful ([this is more than enough](<https://rollout.io/blog/yaml-tutorial-everything-you-need-get-started/>))
-
-### How to run a single script
-
-   * Launch Git Bash [as admin](https://www.groovypost.com/howto/make-windows-10-apps-always-run-with-administrator-privileges/) on Windows, or Terminal on MAC([Hints here](https://macpaw.com/how-to/use-terminal-on-mac))
-
-   * Enter "cd <path>" where <path> is your system path to the shell script
-
-     Example: "cd C:\Users\Zack\Documents\GitHub\neuro-circuit\DeepLabCut\bash_scripts" if I have a script in the folder bash_scripts
-
-   * Run the script
-
-     - Windows: 
-
-       In command prompt, enter "<name_of_script>" and press enter
-
-       Example: "script.sh"
-
-     - Mac:
-
-       In terminal, enter "sh <name_of_script>" and press enter
-
-       Example: "sh script.sh"
+3. You should know how to run a single shell script on your environment. This is covered in the section below.
 
 ## Workflow Setup
 
-### 1. Pre-Installation
+### 1.Pre-Installation
 
-1. Make sure to have Conda. You can install it [here](<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>)
+   - Bash - If using Windows, make sure to have *Git Bash*. You can install it [here](https://gitforwindows.org/). MAC systems should already have a terminal by default.
+   - Conda - You can install it [here](<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>)
 
-2. If using Windows, make sure to have *Git Bash*. You can install it [here](https://gitforwindows.org/)
+        #### How to run a single script Using Bash (Will come into use later)
+
+   - Launch Git Bash [as admin](https://www.groovypost.com/howto/make-windows-10-apps-always-run-with-administrator-privileges/) on Windows, or Terminal on MAC([Hints here](https://macpaw.com/how-to/use-terminal-on-mac))
+
+   - Enter "cd <path>" where <path> is your system path to the shell script
+
+     Example: "cd C:\Users\Zack\Documents\GitHub\neuro-circuit\DeepLabCut\bash_scripts" if I have a script in the folder bash_scripts
+
+   - Run the script
+
+     - **Windows**:  In command prompt, enter "<name_of_script>" and press enter
+       Example: "script.sh"
+
+     - **Mac**: In terminal, enter "sh <name_of_script>" and press enter
+
+       Example: "sh script.sh"
 
 
 ### 2. Environment & Project Creation
 
-1. **Custom Configuration** The project allows you to set some parameters such as the algorithm for frame extraction, number of frames per video, etc. To edit the defaults, open the "pre_config.yaml" file with a text editor, and change the parameters to suit your project (see explanations of most of the parameters in the guide mentioned in "necessary-prior-knowledge")
+1. **Custom Configuration** 
 
-2. **Initial Setup** Using your specified terminal, run "initial_setup.sh" in the folder "bash_scripts" (instructions below). It typically takes 10-15 minutes the first time. **Do not exit even if the terminal shows "Done" as there are more steps.** 
+    The project allows you to set some parameters such as the algorithm for frame extraction, number of frames per video, etc. To edit the defaults, open the **pre_config.yaml** file with a text editor, and change the parameters to suit your project (see explanations of most of the parameters in the guide mentioned in "necessary-prior-knowledge")
 
-When the script is finished, it generally should output "all set: press enter to continue."
+2. **Initial Setup** 
+
+    Using your specified terminal, run **initial_setup.sh** in the folder **bash_script** (instructions below). It typically takes 10-15 minutes the first time. **Do not exit even if the terminal shows "Done" as there are more steps.** 
+
+    When the script is finished, it generally should output "all set: press enter to continue."
 
 3. **Frame Extraction** If you have selected manual frame-extraction, the extracting GUI would launch. If not, DLC will automatically do this for you.
-
-*Note you may get an error by selecting Load Videos but closing the file explorer without choosing anything*
+    Note you may get an error by selecting Load Videos but closing the file explorer without choosing anything*
 
 4. **Labelling**  The labeling GUI would launch
 
    * Click "Load frames"
-
    * Each video would have its own folder (named same as the video) in ".../<working_directory> aka the project folder\labeled-data\" (which needs to be a full path)
-
+   
    * Select the folder for the video you want to label
 
      *Note the folder name is misleading since it contains both labeled and unlabeled images*
 
    Feel free to quit if you decide to take a break. Continue labeling by the step below: "Continue to Label"
 
-### 5. Continuing Labeling after exiting
+### 5. Continue to Label after exiting
 
-Run "label_frames.sh" in the folder "bash_scripts".
+Run the standalone script "label_frames.sh" in the folder "bash_scripts".
 
 
 ### Other Useful Tips
@@ -72,8 +69,7 @@ Run "label_frames.sh" in the folder "bash_scripts".
      DRIVERS: https://www.nvidia.com/Download/index.aspx
 
      CUDA: https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html#verify-you-have-cuda-enabled-system
-     Tips
-
+     
 * When you have accidentally made a mistake, if you have not put too much work in, it is often best to 
   
   * delete the project folder 
@@ -89,8 +85,4 @@ Run "label_frames.sh" in the folder "bash_scripts".
      [Versions to Use/Troubleshooting](https://github.com/AlexEMG/DeepLabCut/blob/master/docs/installation.md#troubleshooting)
 
 ## Questions?
-Contact BU SAIL
-
-shreyap@bu.edu
-
-zackL@bu.edu
+Contact BU SAIL : shreyap@bu.edu, zackL@bu.edu
