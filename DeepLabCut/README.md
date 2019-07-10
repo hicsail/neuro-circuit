@@ -38,7 +38,7 @@
 
 1. **Custom Configuration** 
 
-    The project allows you to set some parameters such as the algorithm for frame extraction, number of frames per video, etc. To edit the defaults, open the **pre_config.yaml** file with a text editor, and change the parameters to suit your project (see explanations of most of the parameters in the guide mentioned in "necessary-prior-knowledge")
+    The project allows you to set some parameters such as the specifying directory containing the raw videos, algorithm for frame extraction, number of frames per video, etc. To edit the defaults, open the **pre_config.yaml** file with a text editor, and change the parameters to suit your project (see explanations of most of the parameters in the guide mentioned in "necessary-prior-knowledge")
 
 2. **Initial Setup** 
 
