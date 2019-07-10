@@ -1,4 +1,4 @@
-# Using DeepLabCut
+# Setting up DeepLabCut for labelling videos
 
 ### Necessary-Prior-Knowledge
 
@@ -8,30 +8,33 @@
 
 ## Workflow Setup
 
-### 1.Pre-Installation
+### A. Pre-Installation
 
    - Bash - If using Windows, make sure to have *Git Bash*. You can install it [here](https://gitforwindows.org/). MAC systems should already have a terminal by default.
    - Conda - You can install it [here](<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>)
 
-        #### How to run a single script Using Bash (Will come into use later)
+     ##### How to run a single script Using Bash (Will come into use later)
+     
 
    - Launch Git Bash [as admin](https://www.groovypost.com/howto/make-windows-10-apps-always-run-with-administrator-privileges/) on Windows, or Terminal on MAC([Hints here](https://macpaw.com/how-to/use-terminal-on-mac))
 
    - Enter "cd <path>" where <path> is your system path to the shell script
 
-     Example: "cd C:\Users\Zack\Documents\GitHub\neuro-circuit\DeepLabCut\bash_scripts" if I have a script in the folder bash_scripts
+     Example: if I have a script in the folder bash_scripts, we can execute:
 
+        > cd C:\Users\Zack\Documents\GitHub\neuro-circuit\DeepLabCut\bash_scripts" 
+    
    - Run the script
 
      - **Windows**:  In command prompt, enter "<name_of_script>" and press enter
-       Example: "script.sh"
+        > "script.sh"
 
      - **Mac**: In terminal, enter "sh <name_of_script>" and press enter
 
-       Example: "sh script.sh"
+       > "sh script.sh"
 
 
-### 2. Environment & Project Creation
+### B. Environment & Project Creation
 
 1. **Custom Configuration** 
 
@@ -57,7 +60,7 @@
 
    Feel free to quit if you decide to take a break. Continue labeling by the step below: "Continue to Label"
 
-### 5. Continue to Label after exiting
+### C. Continue to Label after exiting
 
 Run the standalone script "label_frames.sh" in the folder "bash_scripts".
 
