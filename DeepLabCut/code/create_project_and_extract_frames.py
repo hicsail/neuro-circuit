@@ -2,6 +2,7 @@ import deeplabcut as dlc
 import helpers
 import extract
 import os, json
+# a package that keeps the comments in yaml files
 from ruamel.yaml import YAML
 
 def setup():
