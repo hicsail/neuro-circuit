@@ -1,6 +1,7 @@
 import ctypes
 import os
 import json
+import random
 
 class ConfigReader:
     def __init__(self, config):
@@ -34,3 +35,9 @@ def get_config_path():
         config = json.load(fp)
 
     return config["path_config_file"]
+
+def pick_random_videos(path, randomize=True):
+    file_names = [name for name in os.listdir(path) if "ans" not in name and name[0] != "."]
+    if randomize:
+        random.shuffle(file_names)
+    return file_names

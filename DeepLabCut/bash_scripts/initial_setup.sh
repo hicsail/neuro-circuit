@@ -17,7 +17,8 @@ conda install nb_conda -y
 
 # Project
 cd ../code/
-python create_project_and_extract_frames.py
+python create_project.py
+python extract.py
 python label.py
 cd ../bash_scripts/
 # Finished

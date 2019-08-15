@@ -4,6 +4,8 @@
 # Feel free to change the following example (./raw_videos)
 relative_path_to_videos: ../raw_videos
 bodyparts:
+  - nose
+  - head
   - whisker_1
   - whisker_2
   - whisker_3
@@ -15,6 +17,8 @@ task:
 researchers:
 # Change the working directory to where you want the folders created. If left blank, the current directory is used
 relative_path_to_working_directory:
+# Use the full path if specified
+full_path_to_working_directory:
 frame_extraction_mode:
 frame_extraction_algorithm:
 # The number of frames to pick from a video
