@@ -20,8 +20,11 @@ def setup():
     task = none_handler.read("task")
     researchers = none_handler.read("researchers")
     relative_path_to_working_directory = none_handler.read("relative_path_to_working_directory")
-    # Get full path here
-    video_full_paths = helpers.get_video_full_paths(pre_config["relative_path_to_videos"])
+    # Get paths here
+    if pre_config["full_path_to_working_directory"]:
+        video_full_paths = helpers.get_video_full_paths(pre_config["full_path_to_working_directory"], True)
+    else:
+        video_full_paths = helpers.get_video_full_paths(pre_config["relative_path_to_videos"])
     # Create project
     path_config_file = dlc.create_new_project(task, researchers, video_full_paths, working_directory=relative_path_to_working_directory, copy_videos=False)
 

@@ -13,9 +13,12 @@ class ConfigReader:
     def change(self, key, value):
         self.config[key] = value
 
-def get_video_full_paths(path_to_vidoes):
+def get_video_full_paths(path_to_vidoes, is_input_full_path=False):
     # If filename[0] != "." since there might be hidden files
-    full_paths = [os.path.normpath(os.path.join(os.getcwd(), path_to_vidoes, rel_path)) for rel_path in os.listdir(path_to_vidoes) if rel_path[0] != "."]
+    if is_input_full_path:
+        full_paths = [os.path.normpath(os.path.join(path_to_vidoes, rel_path)) for rel_path in os.listdir(path_to_vidoes) if rel_path[0] != "."]
+    else:
+        full_paths = [os.path.normpath(os.path.join(os.getcwd(), path_to_vidoes, rel_path)) for rel_path in os.listdir(path_to_vidoes) if rel_path[0] != "."]
     return full_paths
 
 def has_admin():
