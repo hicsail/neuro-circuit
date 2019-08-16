@@ -56,16 +56,16 @@ Instructions
     Run Git Bash (**must run as administration**)
    
     [Optional: always make an app run in admin](https://www.groovypost.com/howto/make-windows-10-apps-always-run-with-administrator-privileges/)
-   
+
    **Note: if you don't have "(base)" in the front of the prompt, and you get an error when running "conda activate base", there is probably some problem with your Git Gash and Conda**
-   
+
    A workaround is to 
-   
+
    1. run windows command prompt
    2. run the command: activate  <Conda path in quotes> such as "C:\Users\sail\Anaconda3_1"
    3. go to the directory of the script
    4. run the script with just the name of the script
-   
+
   * Mac:
    
     Run Terminal ([Hints here](https://macpaw.com/how-to/use-terminal-on-mac))
@@ -115,10 +115,26 @@ Instructions
 
 Run "label_frames.sh" in the folder "bash_scripts"
 
+# Additional Notes for [The Chen Lab ](https://sites.bu.edu/chenlab/) at BU
+
+### 1. Handle videos on the SCC
+
+* At the BUSCC, you can access the network drive by
+
+  "sg <groupname>" where <groupname> is the name of the group/organization registered on the SCC
+
+  "mount -t cifs -o username=<username> \\<address>\data /media/data", assuming you want to access the data folder
+
+* Some helpful scripts are at "code\select_training_videos_SCC"
+
+### 2. Refer to file locations on the Network Drive
+
+If you want to refer to the path "Z:/data/raw_videos/" assuming the network drive is "Z:",
+
+you should do \\\\128.197.168.188\data1 assuming 128.197.168.188 is its address (Z needs not to be there)
+
 ## Questions?
 
 Contact BU SAIL
 
-shreyap@bu.edu
-
-zackL@bu.edu
+hicsail@bu.edu
