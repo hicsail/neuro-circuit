@@ -1,6 +1,7 @@
 import ctypes
 import os
 import json
+import random
 
 class ConfigReader:
     def __init__(self, config):
@@ -12,9 +13,12 @@ class ConfigReader:
     def change(self, key, value):
         self.config[key] = value
 
-def get_video_full_paths(path_to_vidoes):
+def get_video_full_paths(path_to_videos, is_input_full_path=False):
     # If filename[0] != "." since there might be hidden files
-    full_paths = [os.path.normpath(os.path.join(os.getcwd(), path_to_vidoes, rel_path)) for rel_path in os.listdir(path_to_vidoes) if rel_path[0] != "."]
+    if is_input_full_path:
+        full_paths = [os.path.normpath(os.path.join(path_to_videos, rel_path)) for rel_path in os.listdir(path_to_videos) if rel_path[0] != "."]
+    else:
+        full_paths = [os.path.normpath(os.path.join(os.getcwd(), path_to_videos, rel_path)) for rel_path in os.listdir(path_to_videos) if rel_path[0] != "."]
     return full_paths
 
 def has_admin():
@@ -34,3 +38,9 @@ def get_config_path():
         config = json.load(fp)
 
     return config["path_config_file"]
+
+def pick_random_videos(path, randomize=True):
+    file_names = [name for name in os.listdir(path) if "ans" not in name and name[0] != "."]
+    if randomize:
+        random.shuffle(file_names)
+    return file_names

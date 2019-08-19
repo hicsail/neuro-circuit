@@ -1,6 +1,7 @@
-DeepLabCut_original_repo/
 config.json
 bank.py
+# ignore the project folders
+whiskers-the_Chen_Lab-*/
 
 # files by extension
 *.avi

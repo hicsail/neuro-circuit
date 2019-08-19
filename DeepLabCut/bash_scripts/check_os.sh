@@ -2,15 +2,19 @@
 platform="$(uname -s)"
 case "${platform}" in
     Linux)     
-		echo "${machine} is unsupported as of right now";;
+		echo "${platform} is unsupported as of right now";;
     Darwin*)    
-		machine="Mac"
+		# Mac
 		install_yaml="dlc-macOS-CPU";;
     MINGW*)     
-		machine="Windows"
-		install_yaml="dlc-windowsGPU";;
+		# Windows
+		if wmic path win32_VideoController get name | grep -q "NVIDIA"; then
+			install_yaml="dlc-windowsGPU"
+		else
+			install_yaml="dlc-windowsCPU"
+		fi
+		;;
     *)          
-		machine="UNKNOWN:${platform}"
 		echo "Unknown machine. Task aborted."
 		exit 1
 esac
