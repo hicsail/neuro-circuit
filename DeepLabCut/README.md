@@ -2,7 +2,7 @@
 
 ### Necessary-Prior-Knowledge
 
-1. It is highly recommended for you to read the [user guide](<https://github.com/hicsail/neuro-circuit//blob/master/DLC_user_guide.pdf>)
+1. It is highly recommended for you to read the [user guide](<https://alexemg.github.io/DeepLabCut/docs/UseOverviewGuide.html>)
 2. A basic understanding of YAML files is helpful ([this is more than enough](<https://rollout.io/blog/yaml-tutorial-everything-you-need-get-started/>))
 3. You should know how to run a single shell script on your environment. This is covered in the section below.
 
