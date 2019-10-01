@@ -1,0 +1,13 @@
+1- Launch Git bash as admin from start menu
+2- In git bash, write cd C:\Users\saildlc\Documents\neuro-circuit\DeepLabCut\whiskers-the_Chen_Lab-2019-10-01
+3- Run label_frames.sh
+4- A GUI should open.
+5- Click Load frames, select a folder in labeled-data directory. 
+6- The GUI should load the frames. The first frame is shown.
+7- Label every frame, clicking save along the way for each.
+8- Quit when you need to exit.
+9- If you stopped in between, just launch the script again (Steps 1-3)
+10- Go back/forth once and you will re-see the labels you marked. You can move them around.
+11- To add a label, once a project is ongoing, just edit the file 
+	- C:\Users\saildlc\Documents\neuro-circuit\DeepLabCut\whiskers-the_Chen_Lab-2019-10-01\config.yaml directly.
+	- After editing, relaunch the script using steps 1-3. The new label should appear on the sidebar.
