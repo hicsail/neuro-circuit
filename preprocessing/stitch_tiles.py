@@ -2,6 +2,7 @@ import argparse
 import os
 from shutil import copyfile
 from terastitcher_wrapper import TeraStitcherWrapper
+import xmltodict
 
 TERA_FOLDER = 'tera_tiles'
 STITCHED_FOLDER = '02_Stitched'
@@ -20,7 +21,7 @@ if __name__ == "__main__":
 	args = parser.parse_args()
 	file_format = args.input_file
 	input_dir = args.input_dir
-	s = int(args.spacing)
+	spacing = int(args.spacing)
 
 	os.chdir(input_dir)
 	filenames = [file for file in glob.glob("*.tif")]
@@ -36,7 +37,7 @@ if __name__ == "__main__":
 
 	grid_size = [int(args.grid_size[0]), int(args.grid_size[1])] 
 
-	coordinates = [str(i*s*10).zfill(6) for i in range(max(grid_size))]
+	coordinates = [str(i*spacing*10).zfill(6) for i in range(max(grid_size))]
 
 	#check that we have access to Z drive
 	if not os.path.exists(TERA_EXE_DIR):
@@ -74,11 +75,15 @@ if __name__ == "__main__":
 	        copyfile(input_dir + '\\' + filelist[j+i*grid_size[0]], dst_tile + '\\' +coordinates[0]+'.tif')
 	        print( filelist[j+i*grid_size[0]] + ' ---> ' + dst_tile)
 
+	with open(input_dir + '/xml_import.xml') as fd:
+	    doc = xmltodict.parse(fd.read())
+	znum = int(doc['TeraStitcher']['dimensions']['@stack_slices'])
+
 
 	# Stitch tiles
 	obj = TeraStitcherWrapper(TERA_EXE_DIR, tera_dir, stitched_dir)
 	obj.ts_import()
-	obj.ts_compute_displacement(sV=25, sH=25, sD=25)
+	obj.ts_compute_displacement(sV=25, sH=25, sD=25, subvoldim = znum)
 	obj.ts_displacement_projection()
 	obj.ts_displacement_threshold(threshold=.7)
 	obj.ts_displacement_tiles()
