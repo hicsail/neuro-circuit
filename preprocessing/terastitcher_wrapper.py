@@ -1,6 +1,7 @@
 import subprocess
 import argparse
 import os
+import xmltodict
 
 class TeraStitcherWrapper():
 
@@ -121,7 +122,6 @@ if __name__ == "__main__":
 	# output_dir = r"X:\ARG_Analysis\Round04\Sample2\561\sample2round43x3multipoint_XX_561"
 
 
-
 	# initiate the parser
 	parser = argparse.ArgumentParser()
 
@@ -136,9 +136,15 @@ if __name__ == "__main__":
 	input_dir = args.input_dir
 	output_dir = args.output_dir
 
+	with open(input_dir + '/xml_import.xml') as fd:
+	    doc = xmltodict.parse(fd.read())
+	znum = int(doc['TeraStitcher']['dimensions']['@stack_slices'])
+
+	print('Z dimension: ' + (str(znum)) )
+
 	obj = TeraStitcherWrapper(ts_dir, input_dir, output_dir)
 	obj.ts_import()
-	obj.ts_compute_displacement(sV=25, sH=25, sD=25)
+	obj.ts_compute_displacement(sV=25, sH=25, sD=25, subvoldim = znum)
 	obj.ts_displacement_projection()
 	obj.ts_displacement_threshold(threshold=.7)
 	obj.ts_displacement_tiles()
