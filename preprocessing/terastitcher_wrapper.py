@@ -34,6 +34,7 @@ class TeraStitcherWrapper():
 			['--vxl3=', str(vxl3)],
 			['--volin_plugin=', volin_plugin],
 			])
+		print('finished importing')
 
 	def ts_compute_displacement(self, algorithm='MIPNCC',
 								sV=25, sH=25, sD=25, 
@@ -45,7 +46,7 @@ class TeraStitcherWrapper():
 		'''
 		'''
 		subprocess.call([self.ts_dir, '--displcompute', 
-			['--projin=', self.input_dir + '/xml_import.xml'], 
+			['--projin=', os.path.join(self.input_dir , 'xml_import.xml')], 
 			['--projout=','xml_displcomp'], 
 			['--subvoldim=', str(subvoldim)],
 			['--algorithm=', algorithm],
@@ -60,11 +61,12 @@ class TeraStitcherWrapper():
 			# ['--D1=', str(D1)],
 			])
 
+		print('displacement compute done!')
 	def ts_displacement_projection(self):
 		'''
 		'''
 		subprocess.call([self.ts_dir, '--displproj', 
-			['--projin=', self.input_dir + '/xml_displcomp.xml'], 
+			['--projin=', os.path.join(self.input_dir ,  'xml_displcomp.xml')], 
 			['--projout=','xml_displproj'], 
 			])
 
@@ -72,7 +74,7 @@ class TeraStitcherWrapper():
 		'''
 		'''
 		subprocess.call([self.ts_dir, '--displthres', 
-			['--projin=', self.input_dir + '/xml_displproj.xml'], 
+			['--projin=', os.path.join(self.input_dir , 'xml_displproj.xml')], 
 			['--projout=','xml_displthres'], 
 			['--threshold=', str(threshold)],
 			])
@@ -81,7 +83,7 @@ class TeraStitcherWrapper():
 		'''
 		'''
 		subprocess.call([self.ts_dir, '--placetiles', 
-			['--projin=', self.input_dir + '/xml_displthres.xml'], 
+			['--projin=', os.path.join(self.input_dir , 'xml_displthres.xml')], 
 			['--projout=','xml_merging'], 
 			])
 
@@ -98,7 +100,7 @@ class TeraStitcherWrapper():
 		'''
 		'''
 		subprocess.call([self.ts_dir, '--merge', 
-			['--projin=', self.input_dir + '/xml_merging.xml'], 
+			['--projin=', os.path.join(self.input_dir , 'xml_merging.xml')], 
 			['--volout=',self.output_folder],
 			['--algorithm=', algorithm],
 			['--resolutions=', '['+str(resolution)+']'],
@@ -144,7 +146,7 @@ if __name__ == "__main__":
 
 	obj = TeraStitcherWrapper(ts_dir, input_dir, output_dir)
 	obj.ts_import()
-	obj.ts_compute_displacement(sV=25, sH=25, sD=25, subvoldim = znum)
+	obj.ts_compute_displacement(sV=25, sH=25, sD=1, subvoldim = znum-1)
 	obj.ts_displacement_projection()
 	obj.ts_displacement_threshold(threshold=.7)
 	obj.ts_displacement_tiles()
