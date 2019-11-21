@@ -55,13 +55,15 @@
 
    * The labels on the side are the ones specified in the config file.
    * To capture whiskers in detail, you can have multiple labels on one whisker as well.
-  
    * Click "Load frames"
    * Each video would have its own folder (named same as the video) in ".../<working_directory> aka the project folder\labeled-data\" (which needs to be a full path)
    
    * Select the folder for the video you want to label
 
      *Note the folder name is misleading since it contains both labeled and unlabeled images*
+
+  ![Labelling GUI](whiskers.png)
+
 
    Feel free to quit if you decide to take a break. Continue labeling by the step below: "Continue to Label"
 
@@ -91,6 +93,13 @@ Run the standalone script "label_frames.sh" in the folder "bash_scripts".
 * If there is no error among the previous output, just press any key in its window to exit the script. Otherwise, feel free to consult [the original repository's troubleshooting tips](<https://github.com/AlexEMG/DeepLabCut/wiki/Troubleshooting-Tips>) or contact us (see button).
 
      [Versions to Use/Troubleshooting](https://github.com/AlexEMG/DeepLabCut/blob/master/docs/installation.md#troubleshooting)
+
+
+### I have labelled my data. What next?
+
+You can now custom train DeepLabCut! Please follow their train/test tutorial that uses the frames you annotated. One such example is their Mouse Reaching demo:
+
+https://github.com/AlexEMG/DeepLabCut/blob/master/examples/Demo_labeledexample_MouseReaching.ipynb
 
 ## Questions?
 Contact BU SAIL : shreyap@bu.edu, zackL@bu.edu
