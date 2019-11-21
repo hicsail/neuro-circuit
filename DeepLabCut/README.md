@@ -13,7 +13,7 @@
    - Bash - If using Windows, make sure to have *Git Bash*. You can install it [here](https://gitforwindows.org/). MAC systems should already have a terminal by default.
    - Conda - You can install it [here](<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>)
 
-     ##### How to run a single script Using Bash (Will come into use later)
+     ### How to run a single script Using Bash (Will come into use later)
      
 
    - Launch Git Bash [as admin](https://www.groovypost.com/howto/make-windows-10-apps-always-run-with-administrator-privileges/) on Windows, or Terminal on MAC([Hints here](https://macpaw.com/how-to/use-terminal-on-mac))
@@ -46,11 +46,16 @@
 
     When the script is finished, it generally should output "all set: press enter to continue."
 
-3. **Frame Extraction** If you have selected manual frame-extraction, the extracting GUI would launch. If not, DLC will automatically do this for you.
-    Note you may get an error by selecting Load Videos but closing the file explorer without choosing anything*
+3. **Frame Extraction** 
+
+   If you have selected manual frame-extraction, the extracting GUI would launch. If not, DLC will automatically do this for you.
+    Note you may get an error by selecting Load Videos but closing the file explorer without choosing anything
 
 4. **Labelling**  The labeling GUI would launch
 
+   * The labels on the side are the ones specified in the config file.
+   * To capture whiskers in detail, you can have multiple labels on one whisker as well.
+  
    * Click "Load frames"
    * Each video would have its own folder (named same as the video) in ".../<working_directory> aka the project folder\labeled-data\" (which needs to be a full path)
    
